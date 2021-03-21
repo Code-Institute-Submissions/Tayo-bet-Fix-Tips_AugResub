@@ -5,6 +5,8 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+import time
+import math
 if os.path.exists("env.py"):
     import env
 
@@ -106,6 +108,32 @@ def logout():
 @app.route("/add_tip", methods=["GET", "POST"])
 def add_tip():
     if request.method == "POST":
+
+        target = os.path.join(APP_ROOT, 'static/uploads/')
+        if not os.path.isdir(target):
+            os.mkdir(target)
+
+
+        tips_image = ""
+        if request.files.getlist("tips_image"):
+            img = request.files.getlist("tips_image")[0]
+            filename = img.filename
+            curtime = math.floor(time.time())
+
+            namearr = filename.split(".")
+            realfilename = ""
+            for i in range(0, len(namearr)):
+                realfilename += namearr[i]
+
+                if (i == len(namearr) - 2):
+                    realfilename += "_" + str(curtime) + "."
+                elif (i < len(namearr) - 2):
+                    realfilename += "."
+
+            destination = "/".join([target, realfilename])
+            img.save(destination)
+            tips_image = realfilename
+
         tip = {
             "category_name": request.form.get("category_name"),
             "tips_name": request.form.get("tips_name"),
@@ -113,6 +141,10 @@ def add_tip():
             "tips_date": request.form.get("tips_date"),
             "created_by": session["user"]
         }
+
+        if tips_image != "":
+            tip["tips_image"] = "/uploads/" + tips_image
+
         mongo.db.tips.insert_one(tip)
         flash("Tips Added Successfully ")
         return redirect(url_for("get_tips"))
