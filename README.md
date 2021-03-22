@@ -124,7 +124,3 @@ GitHub is selected as the method during deployment to build and generate url.
 
 #### Acknowlegment:
 Special thanks to My Mentor Dick Vlaanderen for guidance and direction from my first mile-stone Project all through till now.
-
-##### Note Code Institute:
-* Username: Admin
-* Password: Baba312
