@@ -1,45 +1,61 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# *Fix Manager*
+<img src="static/assets/home.png">
 
-Welcome Tayo-bet,
+Getting a technician to come fix a simple broken appliance or furniture in homes are most times costly and time wasting,  **Fix Manager** is a platform where people can share and learn basic tips to fix their home appliances and furniture. Tips are allowed to be update, deleted and pictures uploaded.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
 
-## Gitpod Reminders
+## UX
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### User Experience Goals
 
-`python3 -m http.server`
+* Help people learn and share tips to fix their broken home appliances.
+* Users will be able to create a profile, using a personalized username and password for authentication.
+* Users will be able to update, edit and delete tips shared at anytime of their choice.
 
-A blue button should appear to click: *Make Public*,
+### UX Process
 
-Another blue button should appear to click: *Open Browser*.
+<img src="static/assets/ux1.png">
+* A logged-in user would be able to see the necessary navbars to create a fix tip, profile, homepage where the general tips from all users are displayed and to also log-out.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+<img src="static/assets/ux2.png">
+* Users are only allowed to edit their personal tips without access to edit or delete the general public tips.
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
+<img src="static/assets/admin.png">
+* Only the admin has access to add, edit and delete the categories with the public exempted from this functionality.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#### Project Method:
+The method use in the project are primarily acquire from the Code Institute Fullstack Software Development Course modules in HTML, CSS, JavaScript, Python Essentials and Backend Development particularly the All Task mini project Example. It is worthy of mention that I have studied other software development free materials, courses on Udemy, snippet codes, templates and Video tutorials on YouTube.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## FEATURES
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+1. Navbar: Allows users to navigate to different options within the platform.
+<img src="static/assets/home.png">
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+1. Register: Users allow to create a profile with a username and password of their choice for authentication.
+<img src="static/assets/register.png">
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+1. Login: Users can login to the platform after creating the profile with details used when creating their profile.
+<img src="static/assets/login.png">
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+1. Tips/Homepage: All users can see the general tips posted by all users, with their names and dates when repair tips were added.
+<img src="static/assets/tips.png">
 
---------
+1. Add Tips: All users can add their repairs tips using category options and heading of the tips they which to share. They can also upload pictures for others users to follow.
+<img src="static/assets/add_tips.png">
+<img src="static/assets/add_tips2.png">
 
-Happy coding!
+1. Tips Search: A search options is allowed for quick access using name and description for all users.
+<img src="static/assets/tips_search.png">
+
+1. Category Add/Delete Limitations: Only the Admin is allowed to manage/add categories or Delete Categories with access blocked to general users.
+<img src="static/assets/manage_cate.png">
+<img src="static/assets/add_cate.png">
+<img src="static/assets/admin.png">
+
+1. Delete Defensive Coding: To delete any tips or category users are allow to re-consider and confirm delete action.
+<img src="static/assets/delete_cate.png">
