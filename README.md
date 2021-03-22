@@ -96,3 +96,35 @@ The tools were used for testing for code validation and beauty purpose:
 * Sentry trial version to debbug python scripts for error.
 
 Navigation bars and buttons on this website has been tested, navigations all links to indended pages and the buttons functions as intended. The authentication requires a username and password to login, giving access to more functionalities and pages such as user profile, only the admin can update or delete a category. This website database uses mongoDB and all the endpoints created to carry out CRUD operations works properly; registered users of this website can create, read, update and delete data in the database as expected.
+
+### Limitations
+
+* User profile can be better with more options for personal details, password reset and option to delete profile by users that wishes to exit platform.
+* A video upload will be better for users, to see tips givien being practicalised.
+* A live chat will be a great addition to help users having problems on the platform.
+
+### Deployment
+
+Fix Managers is deployed on Github, connected to Heroku with automatic update with every Git Push. Necessary Files required by Heroku such as Procfile and requirements.txt have been added and sensitive folders gitignored.
+GitHub is selected as the method during deployment to build and generate url.
+
+#### Github url: 
+* https://github.com/Tayo-bet/Fix-Tips
+
+#### Heroku url:
+* https://fixtips.herokuapp.com/
+
+
+### Credits:
+
+* This project draws inspiration from Code Institute Mini Project Example during backend development module.
+* https://www.youtube.com/watch?v=6WruncSoCdI&t=13s Was used as additional lessons for image upload in Flask.
+* https://www.youtube.com/watch?v=zMhmZ_ePGiM&t=252s Was used as additional lessons for image upload in Flask.
+
+
+#### Acknowlegment:
+Special thanks to My Mentor Dick Vlaanderen for guidance and direction from my first mile-stone Project all through till now.
+
+##### Note Code Institute:
+* Username: Admin
+* Password: Baba312
