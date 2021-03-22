@@ -84,6 +84,15 @@ The method use in the project are primarily acquire from the Code Institute Full
 ### Libraries
 * Font Awasome  For icons.
 * Materailizecss For source codes and styling.
-* Jinja Framework For template execution and code re-usability.
+* Jinja Framework Used for template execution and code re-usability.
 * jQuery To simplify DOM manipulation.
 
+## Testing
+
+The tools were used for testing for code validation and beauty purpose:
+
+* Freeformatter used to beautify the HTML code.
+* BeautyTools used to beautify and validate the Javascript and CSS codes.
+* Sentry trial version to debbug python scripts for error.
+
+Navigation bars and buttons on this website has been tested, navigations all links to indended pages and the buttons functions as intended. The authentication requires a username and password to login, giving access to more functionalities and pages such as user profile, only the admin can update or delete a category. This website database uses mongoDB and all the endpoints created to carry out CRUD operations works properly; registered users of this website can create, read, update and delete data in the database as expected.
