@@ -68,3 +68,22 @@ The method use in the project are primarily acquire from the Code Institute Full
 
 1. Footer: A footer with return links to Homepage, Login and Register. With a link to contact through a social media account.
 <img src="static/assets/footer.png">
+
+## Technology used
+
+### Programming Languages:
+* HTML
+* CSS
+* JAVASCRIPT
+* PYTHON
+
+### DataBase
+
+* MongoDB
+
+### Libraries
+* Font Awasome  For icons.
+* Materailizecss For source codes and styling.
+* Jinja Framework For template execution and code re-usability.
+* jQuery To simplify DOM manipulation.
+
