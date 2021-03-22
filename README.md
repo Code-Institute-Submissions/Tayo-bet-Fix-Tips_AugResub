@@ -59,3 +59,12 @@ The method use in the project are primarily acquire from the Code Institute Full
 
 1. Delete Defensive Coding: To delete any tips or category users are allow to re-consider and confirm delete action.
 <img src="static/assets/delete_cate.png">
+
+1. Log Out: Users can log out of their profile with a log out message desplayed to confirm action.
+<img src="static/assets/logout.png">
+
+1. Wrong Login Details: Wrong log in details alerts the users without suggesting what is wrong between username and password.
+<img src="static/assets/wro.png">
+
+1. Footer: A footer with return links to Homepage, Login and Register. With a link to contact through a social media account.
+<img src="static/assets/footer.png">
