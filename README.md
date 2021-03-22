@@ -33,40 +33,40 @@ The method use in the project are primarily acquire from the Code Institute Full
 
 ## FEATURES
 
-1. Navbar: Allows users to navigate to different options within the platform.
+* Navbar: Allows users to navigate to different options within the platform.
 <img src="static/assets/home.png">
 
-1. Register: Users allow to create a profile with a username and password of their choice for authentication.
+* Register: Users allow to create a profile with a username and password of their choice for authentication.
 <img src="static/assets/register.png">
 
-1. Login: Users can login to the platform after creating the profile with details used when creating their profile.
+* Login: Users can login to the platform after creating the profile with details used when creating their profile.
 <img src="static/assets/login.png">
 
-1. Tips/Homepage: All users can see the general tips posted by all users, with their names and dates when repair tips were added.
+* Tips/Homepage: All users can see the general tips posted by all users, with their names and dates when repair tips were added.
 <img src="static/assets/tips.png">
 
-1. Add Tips: All users can add their repairs tips using category options and heading of the tips they which to share. They can also upload pictures for others users to follow.
+* Add Tips: All users can add their repairs tips using category options and heading of the tips they which to share. They can also upload pictures for others users to follow.
 <img src="static/assets/add_tips.png">
 <img src="static/assets/add_tips2.png">
 
-1. Tips Search: A search options is allowed for quick access using name and description for all users.
+* Tips Search: A search options is allowed for quick access using name and description for all users.
 <img src="static/assets/tips_search.png">
 
-1. Category Add/Delete Limitations: Only the Admin is allowed to manage/add categories or Delete Categories with access blocked to general users.
+* Category Add/Delete Limitations: Only the Admin is allowed to manage/add categories or Delete Categories with access blocked to general users.
 <img src="static/assets/manage_cate.png">
 <img src="static/assets/add_cate.png">
 <img src="static/assets/admin.png">
 
-1. Delete Defensive Coding: To delete any tips or category users are allow to re-consider and confirm delete action.
+* Delete Defensive Coding: To delete any tips or category users are allow to re-consider and confirm delete action.
 <img src="static/assets/delete_cate.png">
 
-1. Log Out: Users can log out of their profile with a log out message desplayed to confirm action.
+* Log Out: Users can log out of their profile with a log out message desplayed to confirm action.
 <img src="static/assets/logout.png">
 
-1. Wrong Login Details: Wrong log in details alerts the users without suggesting what is wrong between username and password.
+* Wrong Login Details: Wrong log in details alerts the users without suggesting what is wrong between username and password.
 <img src="static/assets/wro.png">
 
-1. Footer: A footer with return links to Homepage, Login and Register. With a link to contact through a social media account.
+* Footer: A footer with return links to Homepage, Login and Register. With a link to contact through a social media account.
 <img src="static/assets/footer.png">
 
 ## Technology used
