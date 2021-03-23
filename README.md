@@ -5,17 +5,14 @@ Getting a technician to come fix a simple broken appliance or furniture in homes
 
 
 ## UX
+The idea of Fix Managers was to create a platform where people can get solution tips on how to make simple repairs in their homes, hence I focus on simplicity and intuitiveness.
+The navbars were created to address registered and unregistered users: everyone can see the tips posted but only registered users can create, edit and delete tips.
+I aslo created opportunity for users to add pictures to their post. Every registered user has the possibility of the following proces:
 
-### User Experience Goals
-
-* Help people learn and share tips to fix their broken home appliances.
-* Users will be able to create a profile, using a personalized username and password for authentication.
-* Users will be able to update, edit and delete tips shared at anytime of their choice.
-
-### UX Process
 
 <img src="static/assets/ux1.png">
-* A logged-in user would be able to see the necessary navbars to create a fix tip, profile, homepage where the general tips from all users are displayed and to also log-out.
+* A logged-in user would be able to see the necessary navbars to create a fix tip, profile,
+ homepage where the general tips from all users are displayed and to also log-out.
 
 <img src="static/assets/ux2.png">
 * Users are only allowed to edit their personal tips without access to edit or delete the general public tips.
@@ -24,6 +21,26 @@ Getting a technician to come fix a simple broken appliance or furniture in homes
 <img src="static/assets/admin.png">
 * Only the admin has access to add, edit and delete the categories with the public exempted from this functionality.
 
+
+
+### User Story
+* Mike mistakenly broke the handle to his kitchen cupboard, it is still new and does not want to buy a new one. He called up a carpenter who wants to charge him almost the amount to buy a new one
+and can only come after 10days due to work load. Mike called a friend that tells him about Fix Manager, a platform where he can get tips about how to make repairs to home appliances and furniture.
+Mike visits the platform and:
+
+* Register to get an account.
+* Checks the different categories.
+* Searches for relevant tips relating to what he wants.
+* Applies the tips he say the platform.
+* Follows the examples in the pictures.
+* Discovers a way to make it better and shares the tips with other users with different pictures.
+
+
+### User Experience Goals
+
+* Help people learn and share tips to fix their broken home appliances.
+* Users will be able to create a profile, using a personalized username and password for authentication.
+* Users will be able to update, edit and delete tips shared at anytime of their choice.
 
 
 #### Project Method:
@@ -76,6 +93,8 @@ The method use in the project are primarily acquire from the Code Institute Full
 * CSS
 * JAVASCRIPT
 * PYTHON
+* HEROKU
+* MONGODB
 
 ### DataBase
 
