@@ -10,15 +10,16 @@ import math
 if os.path.exists("env.py"):
     import env
 
-
 app = Flask(__name__)
+
+# root for file upload to db
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
-
 
 @app.route("/")
 @app.route("/get_tips")
@@ -31,7 +32,6 @@ def search():
     query = request.form.get("query")
     tips = list(mongo.db.tips.find({"$text": {"$search": query}}))
     return render_template("tips.html", tips=tips)
-
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -96,7 +96,6 @@ def profile(username):
 
     return redirect(url_for("login"))
 
-
 @app.route("/logout")
 def logout():
     # To get user from session cookie
@@ -113,10 +112,8 @@ def add_tip():
         if not os.path.isdir(target):
             os.mkdir(target)
 
-
-        tips_image = ""
-        if request.files.getlist("tips_image"):
-            img = request.files.getlist("tips_image")[0]
+        tips_image_arr =[]
+        for img in request.files.getlist("tips_image"):
             filename = img.filename
             curtime = math.floor(time.time())
 
@@ -132,7 +129,8 @@ def add_tip():
 
             destination = "/".join([target, realfilename])
             img.save(destination)
-            tips_image = realfilename
+            realPath = "/static/uploads/" + realfilename;
+            tips_image_arr.append(realPath);
 
         tip = {
             "category_name": request.form.get("category_name"),
@@ -142,17 +140,15 @@ def add_tip():
             "created_by": session["user"]
         }
 
-        if tips_image != "":
-            tip["tips_image"] = "/uploads/" + tips_image
+        if len(tips_image_arr) > 0:
+            tip["tips_image_array"] = tips_image_arr
 
         mongo.db.tips.insert_one(tip)
         flash("Tips Added Successfully ")
         return redirect(url_for("get_tips"))
 
-
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_tip.html", categories=categories)
-
 
 @app.route("/edit_tip/<tip_id>", methods=["GET", "POST"])
 def edit_tip(tip_id):
@@ -167,11 +163,9 @@ def edit_tip(tip_id):
         mongo.db.tips.update({"_id": ObjectId(tip_id)}, submit)
         flash("Tips Updated Successfully ")
 
-
     tip = mongo.db.tips.find_one({"_id": ObjectId(tip_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_tips.html", tip=tip, categories=categories)
-
 
 @app.route("/delete_tip/<tip_id>")
 def delete_tip(tip_id):
@@ -179,12 +173,10 @@ def delete_tip(tip_id):
     flash("Tips Deleted Succesfully")
     return redirect(url_for("get_tips"))
 
-
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
-
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
@@ -217,7 +209,6 @@ def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))    
-
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
