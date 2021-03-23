@@ -114,7 +114,9 @@ The tools were used for testing for code validation and beauty purpose:
 * BeautyTools used to beautify and validate the Javascript and CSS codes.
 * Sentry trial version to debbug python scripts for error.
 
-Navigation bars and buttons on this website has been tested, navigations all links to indended pages and the buttons functions as intended. The authentication requires a username and password to login, giving access to more functionalities and pages such as user profile, only the admin can update or delete a category. This website database uses mongoDB and all the endpoints created to carry out CRUD operations works properly; registered users of this website can create, read, update and delete data in the database as expected.
+Navigation bars and buttons on this website has been tested, navigations all links to indended pages and the buttons functions as intended. 
+The authentication requires a username and password to login, giving access to more functionalities and pages such as user profile, only the admin can update or delete a category. 
+This website database uses mongoDB and all the endpoints created to carry out CRUD operations works properly; registered users of this website can create, read, update and delete data in the database as expected.
 
 ### Limitations
 
@@ -126,6 +128,36 @@ Navigation bars and buttons on this website has been tested, navigations all lin
 
 Fix Managers is deployed on Github, connected to Heroku with automatic update with every Git Push. Necessary Files required by Heroku such as Procfile and requirements.txt have been added and sensitive folders gitignored.
 GitHub is selected as the method during deployment to build and generate url.
+
+Below is the step I followed to deploy my site to GitHub.
+
+I used the below command to secure my work by pushing them to the repository file that was created for the project on GitHub.
+
+* git add -A
+* git commit -m " text to represent what is being committed"
+* git push
+
+Below are the step I used to deploy on Heroku:
+After creating account
+
+* Clicked on Settings
+* Reveal Configvars
+* Assigned the appropriate values for the below:
+
+IP: 0.0.0.0
+PORT: 5000
+SECRET_KEY: FROM MONGODB DATABASE ACCESS,
+MONGO_URI: URI FROM MONGODB AND I CORRECTED USER AND DATABASE NAME.
+MONGODB_NAME: NAME OF THE DATABASE CREATED ON MONGODB COLLECTION.
+
+* I connected to Github on Heroku through the name of Repo through the setting on create new app.
+
+
+Below are the steps I used to create database on MongoDB:
+
+After creating an account;
+* Through Collections create DataBase.
+* Assigned what categories, tips and users.
 
 #### Github url: 
 * https://github.com/Tayo-bet/Fix-Tips
