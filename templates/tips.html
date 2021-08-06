@@ -1,6 +1,16 @@
 {% extends "main.html" %}
 {% block tips %}
 
+    <style>
+        img {
+            border: 1px solid #ddd;
+            border-color: slategray;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
+    </style>
+
     <h3 class="center-align">All Tips</h3>
 
     <div class="row card-panel grey lighten-5">
@@ -21,17 +31,31 @@
         </form>
     </div>
     {% if tips|length > 0 %}
-    <ul class="collapsible">
+    <div class="row">
+    <!-- <ul class="collapsible"> -->
         {% for tip in tips %}
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col s6 m6">
+            <div class="card medium grey lighten-2">
+            <div class="card-image">
+                {% for tip_image in tip.tips_image_array %}
+                    <img src="{{ tip_image }}" alt="{{ tip_image }}"/>
+                {% endfor %}
             </div>
-          </div>
-        <li>
+            <div class="card-content">
+                <p><strong>{{ tip.tips_name }}</strong> : {{ tip.tips_date }}</p>
+                <strong>{{ tip.category_name }}</strong>
+            <p>{{ tip.tips_description }}</p>
+            <p><em>by: {{ tip.created_by }}</em></p>
+            </div>
+            {% if session.user|lower == tip.created_by|lower %}
+                <div class="card-action">
+                    <a href="{{ url_for('delete_tip', tip_id=tip._id) }}" class="btn-small blue lighten-1">Done</a>
+                    <a href="{{ url_for('edit_tip', tip_id=tip._id) }}" class="btn-small yellow darken-3">Edit</a>
+                </div>
+            {% endif %}
+            </div>
+        </div>
+        <!-- <li>
             <div class="collapsible-header teal lighten-1">
                 <div class="col s3">
                     {% if session.user|lower == tip.created_by|lower %}
@@ -57,9 +81,10 @@
                         </div>
                     {% endif %}
             </div>
-        </li>
+        </li> -->
         {% endfor %}
-    </ul>
+    <!-- </ul> -->
+    </div>
     {% else %}
      <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
     {% endif %}
