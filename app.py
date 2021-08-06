@@ -158,6 +158,8 @@ def add_tip():
 @app.route("/edit_tip/<tip_id>", methods=["GET", "POST"])
 def edit_tip(tip_id):
     if request.method == "POST":
+        tips_image_arr =[]
+        tips_image_arr.append(request.form.get("tips_image"))
         submit = {
             "category_name": request.form.get("category_name"),
             "tips_name": request.form.get("tips_name"),
@@ -165,6 +167,7 @@ def edit_tip(tip_id):
             "tips_date": request.form.get("tips_date"),
             "created_by": session["user"]
         }
+        submit["tips_image_array"] = tips_image_arr
         mongo.db.tips.update({"_id": ObjectId(tip_id)}, submit)
         flash("Tips Updated Successfully ")
 
