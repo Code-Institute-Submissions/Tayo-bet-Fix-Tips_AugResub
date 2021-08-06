@@ -10,13 +10,17 @@ import math
 if os.path.exists("env.py"):
     import env
 
-app = Flask(__name__)
+from dotenv import load_dotenv
+load_dotenv()
 
 # root for file upload to db
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+
+app = Flask(__name__)
+
+app.config["MONGO_DBNAME"] = os.getenv("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
@@ -148,6 +152,7 @@ def add_tip():
         return redirect(url_for("get_tips"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
+    print(categories)
     return render_template("add_tip.html", categories=categories)
 
 @app.route("/edit_tip/<tip_id>", methods=["GET", "POST"])
@@ -213,4 +218,4 @@ def delete_category(category_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=os.environ.get("DEBUG"))
