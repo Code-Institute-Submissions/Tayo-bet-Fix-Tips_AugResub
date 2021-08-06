@@ -9,9 +9,7 @@ import time
 import math
 if os.path.exists("env.py"):
     import env
-
-from dotenv import load_dotenv
-load_dotenv()
+    
 
 # root for file upload to db
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
