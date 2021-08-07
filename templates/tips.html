@@ -32,7 +32,6 @@
     </div>
     {% if tips|length > 0 %}
     <div class="row">
-    <!-- <ul class="collapsible"> -->
         {% for tip in tips %}
         <div class="col s6 m6">
             <div class="card medium grey lighten-2">
@@ -55,35 +54,9 @@
             {% endif %}
             </div>
         </div>
-        <!-- <li>
-            <div class="collapsible-header teal lighten-1">
-                <div class="col s3">
-                    {% if session.user|lower == tip.created_by|lower %}
-                     <a href="{{ url_for('delete_tip', tip_id=tip._id) }}" class="btn-small blue lighten-1">Done</a>
-                     <a href="{{ url_for('edit_tip', tip_id=tip._id) }}" class="btn-small yellow darken-3">Edit</a>
-                     <i class="fas fa-caret-down"></i>
-                    {% endif %}
-                </div>
-                
-                <strong>{{ tip.tips_name }}</strong> : {{ tip.tips_date }}
-            </div>
-            <div class="collapsible-body">
-                <strong>{{ tip.category_name }}</strong>
-                <p>{{ tip.tips_description }}</p>
-                <p><em>by: {{ tip.created_by }}</em></p>
-                    {% if  tip.tips_image_array %}
-                        <div class="row " style="display: inline; align-items: center; justify-content: center" >
-                        {% for tip_image in tip.tips_image_array %}
-                            <div class="col" style="width: 25%">
-                                <img src="{{ tip_image }}" style="width: 100%; margin:auto;height: auto" alt="{{ tip_image }}"/>
-                            </div>
-                        {% endfor %}
-                        </div>
-                    {% endif %}
-            </div>
-        </li> -->
+        
         {% endfor %}
-    <!-- </ul> -->
+    
     </div>
     {% else %}
      <h3 class="red-text text-darken-4 center-align">No Results Found</h3>

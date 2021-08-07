@@ -1,29 +1,30 @@
 # *Fix Manager*
 <img src="static/assets/home.png">
 
-Getting a technician to come fix a simple broken appliance or furniture in homes are most times costly and time wasting,  **Fix Manager** is a platform where people can share and learn basic tips to fix their home appliances and furniture. Tips are allowed to be update, deleted and pictures uploaded.
+**Fix Manager** is a platform where people can share and learn basic tips to fix their home appliances and furniture. Tips are allowed to be update, deleted and pictures uploaded.
 
 
 ## UX
-The idea of Fix Managers was to create a platform where people can get solution tips on how to make simple repairs in their homes, hence I focus on simplicity and intuitiveness.
-The navbars were created to address registered and unregistered users: everyone can see the tips posted but only registered users can create, edit and delete tips.
-I aslo created opportunity for users to add pictures to their post. Every registered user has the possibility of the following proces:
 
+### Users Goal
 
-<img src="static/assets/ux1.png">
-* A logged-in user would be able to see the necessary navbars to create a fix tip, profile,
- homepage where the general tips from all users are displayed and to also log-out.
+* To help users make simple and normal repairs in their homes.
+* To allow users avoid the waiting long waiting times it takes to get technicians.
+* Help users cut expenses by trying to make repairs through tips and images share by other users.
+* Give users the opportunity to share their own experience with repairs of their own too.
 
-<img src="static/assets/ux2.png">
-* Users are only allowed to edit their personal tips without access to edit or delete the general public tips.
+### Business Goals
 
+* To create a platform where by sharing repair ideas companies can advertise their house products and thereby generate income for the platform.
 
-<img src="static/assets/admin.png">
-* Only the admin has access to add, edit and delete the categories with the public exempted from this functionality.
+* To create a platform to generate marketing database for relevant companies in marketing and research purposes.
 
 
 
 ### User Story
+
+#### Persona
+
 * Mike mistakenly broke the handle to his kitchen cupboard, it is still new and does not want to buy a new one. He called up a carpenter who wants to charge him almost the amount to buy a new one
 and can only come after 10days due to work load. Mike called a friend that tells him about Fix Manager, a platform where he can get tips about how to make repairs to home appliances and furniture.
 Mike visits the platform and:
@@ -33,18 +34,38 @@ Mike visits the platform and:
 * Searches for relevant tips relating to what he wants.
 * Applies the tips he say the platform.
 * Follows the examples in the pictures.
-* Discovers a way to make it better and shares the tips with other users with different pictures.
+
+After Making the repairs Mike decided to share his experience with other users by:
+
+* Creating a sharing his own tips with updates of additional informations that will help others do it better and faster.
+
+* He upload pictures of the his repairs too.
 
 
-### User Experience Goals
+## Design Choice
 
-* Help people learn and share tips to fix their broken home appliances.
-* Users will be able to create a profile, using a personalized username and password for authentication.
-* Users will be able to update, edit and delete tips shared at anytime of their choice.
+### Fonts
 
+* Sans Serif
+* Pacifico
 
-#### Project Method:
-The method use in the project are primarily acquire from the Code Institute Fullstack Software Development Course modules in HTML, CSS, JavaScript, Python Essentials and Backend Development particularly the All Task mini project Example. It is worthy of mention that I have studied other software development free materials, courses on Udemy, snippet codes, templates and Video tutorials on YouTube.
+### Colour
+
+<img src="static/assets/colordesign.png">
+
+## Wireframes
+
+### Desktop View
+
+<img src="static/assets/desktop.jpg">
+
+### Tablet View
+
+<img src="static/assets/tablet.jpg">
+
+### Mobile View
+
+<img src="static/assets/mobile.jpg">
 
 
 
@@ -60,7 +81,7 @@ The method use in the project are primarily acquire from the Code Institute Full
 <img src="static/assets/login.png">
 
 * Tips/Homepage: All users can see the general tips posted by all users, with their names and dates when repair tips were added.
-<img src="static/assets/tips.png">
+<img src="static/assets/homenew.png">
 
 * Add Tips: All users can add their repairs tips using category options and heading of the tips they which to share. They can also upload pictures for others users to follow.
 <img src="static/assets/add_tips.png">
@@ -114,9 +135,16 @@ The tools were used for testing for code validation and beauty purpose:
 * BeautyTools used to beautify and validate the Javascript and CSS codes.
 * Sentry trial version to debbug python scripts for error.
 
-Navigation bars and buttons on this website has been tested, navigations all links to indended pages and the buttons functions as intended. 
-The authentication requires a username and password to login, giving access to more functionalities and pages such as user profile, only the admin can update or delete a category. 
-This website database uses mongoDB and all the endpoints created to carry out CRUD operations works properly; registered users of this website can create, read, update and delete data in the database as expected.
+I carried out the following checks to test the website:
+
+* I clicked the Navigation bars and buttons on this website to ensure all links go to indended pages and the buttons functions as intended. 
+
+* I checked that authentication requires a username and password to login.
+
+* I checked to be sure that only the admin can update or delete a category. 
+
+* I checked to be sure that users cannot delete tips that are not their own.
+
 
 ### Limitations
 
@@ -127,9 +155,6 @@ This website database uses mongoDB and all the endpoints created to carry out CR
 ### Deployment
 
 Fix Managers is deployed on Github, connected to Heroku with automatic update with every Git Push. Necessary Files required by Heroku such as Procfile and requirements.txt have been added and sensitive folders gitignored.
-GitHub is selected as the method during deployment to build and generate url.
-
-Below is the step I followed to deploy my site to GitHub.
 
 I used the below command to secure my work by pushing them to the repository file that was created for the project on GitHub.
 
