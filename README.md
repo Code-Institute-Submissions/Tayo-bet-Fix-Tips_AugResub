@@ -83,6 +83,8 @@ After Making the repairs Mike decided to share his experience with other users b
 * Tips/Homepage: All users can see the general tips posted by all users, with their names and dates when repair tips were added.
 <img src="static/assets/homenew.png">
 
+<img src="static/assets/homenew2.png">
+
 * Add Tips: All users can add their repairs tips using category options and heading of the tips they which to share. They can also upload pictures for others users to follow.
 <img src="static/assets/add_tips.png">
 <img src="static/assets/add_tips2.png">
