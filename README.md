@@ -169,13 +169,8 @@ After creating account
 
 * Clicked on Settings
 * Reveal Configvars
-* Assigned the appropriate values for the below:
+* Assigned the appropriate values for the environment variables.
 
-IP: 0.0.0.0
-PORT: 5000
-SECRET_KEY: FROM MONGODB DATABASE ACCESS,
-MONGO_URI: URI FROM MONGODB AND I CORRECTED USER AND DATABASE NAME.
-MONGODB_NAME: NAME OF THE DATABASE CREATED ON MONGODB COLLECTION.
 
 * I connected to Github on Heroku through the name of Repo through the setting on create new app.
 
