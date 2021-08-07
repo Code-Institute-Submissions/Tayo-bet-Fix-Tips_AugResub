@@ -9,13 +9,13 @@
 ### Users Goal
 
 * To help users make simple and normal repairs in their homes.
-* To allow users avoid the waiting long waiting times it takes to get technicians.
-* Help users cut expenses by trying to make repairs through tips and images share by other users.
+* To allow users avoid the long waiting times it takes to get technicians.
+* Help users cut expenses by trying to make repairs on their own through tips and images share by other users.
 * Give users the opportunity to share their own experience with repairs of their own too.
 
 ### Business Goals
 
-* To create a platform where by sharing repair ideas companies can advertise their house products and thereby generate income for the platform.
+* To create a platform where by sharing repair ideas companies can advertise their home domestic products and thereby generate income for the platform.
 
 * To create a platform to generate marketing database for relevant companies in marketing and research purposes.
 
@@ -191,6 +191,7 @@ After creating an account;
 ### Credits:
 
 * This project draws inspiration from Code Institute Mini Project Example during backend development module.
+* Materializzecss for html template.
 * https://www.youtube.com/watch?v=6WruncSoCdI&t=13s Was used as additional lessons for image upload in Flask.
 * https://www.youtube.com/watch?v=zMhmZ_ePGiM&t=252s Was used as additional lessons for image upload in Flask.
 
